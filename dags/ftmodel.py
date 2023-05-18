@@ -51,7 +51,7 @@ def ftmodel_api():
             axis=0
         )
 
-        data = data[['tpep_pickup_datetime', 'total_amount']]
+        data = transform_loaded_data(data)
 
         X = data.drop('total_amount', axis=1)
         y = data['total_amount']
